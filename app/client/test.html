@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+</head>
+<body>
+<div class="origin">origin: <span class="origin-value"></span></div>
+<div class="domain">domain: <span class="domain-value"></span></div>
+<div class="cookie">cookie: <span class="cookie-value"></span></div>
+<script type="text/javascript">
+  try {
+    var cookie = document.cookie
+  } catch(e) {
+    var cookie = e;
+  }
+
+  document.querySelector('.origin-value').textContent = document.origin;
+  document.querySelector('.domain-value').textContent = document.domain;
+  document.querySelector('.cookie-value').textContent = cookie;
+</script>
+</body>
+</html>
